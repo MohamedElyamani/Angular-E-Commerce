@@ -1,0 +1,272 @@
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="banner position-relative">
+          <img src="assets/img/left-banner-image.jpg" alt="" class="w-100"/>
+          <div class="banner-content text-white text-center d-flex justify-content-center align-items-center">
+            <div class="text">
+              <h1>We Are Hexashop</h1>
+              <p>Awesome, clean & creative HTML5 Template</p>
+              <a href="#">Purchase Now!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="banner position-relative">
+              <img src="assets/img/baner-right-image-01.jpg" alt="" class="w-100"/>
+              <div class="layer text-white text-center d-flex justify-content-center align-items-center">
+                <div class="text">
+                  <h4>Women</h4>
+                  <p>Best clothes for women</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="banner position-relative">
+              <img src="assets/img/baner-right-image-02.jpg" alt="" class="w-100"/>
+              <div class="layer text-white text-center d-flex justify-content-center align-items-center">
+                <div class="text">
+                  <h4>Men</h4>
+                  <p>Best clothes for Men</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="banner position-relative">
+              <img src="assets/img/baner-right-image-03.jpg" alt="" class="w-100"/>
+              <div class="layer text-white text-center d-flex justify-content-center align-items-center">
+                <div class="text">
+                  <h4>Kids</h4>
+                  <p>Best clothes for Kids</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="banner position-relative">
+              <img
+                src="assets/img/baner-right-image-04.jpg"
+                alt=""
+                class="w-100"
+              />
+              <div
+                class="layer text-white text-center d-flex justify-content-center align-items-center"
+              >
+                <div class="text">
+                  <h4>Accessories</h4>
+                  <p>Best Trends for Accessories</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid">
+  <div class="brdr my-4"></div>
+</div>
+<!-- statrt men section -->
+<section>
+    <div class="container">
+      <div class="title">
+        <h2>Men's Latest</h2>
+        <p>Details to details is what makes Hexashop different from the other themes.</p>
+    </div>
+      <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide>
+            <div class="row mt-4">
+              <div class="col-md-4" *ngFor="let Item of menItems">
+                <div class="item">
+                  <img [src]= 'Item.img' alt="men clothes" class="w-100">
+                    <div class="content mb-4">
+                        <h4>{{Item.name}}</h4>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h6>{{Item.price}}</h6>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+
+        <div class="discover-more">
+          <a routerLink="/men-clothes" class="py-2 px-3 border border-secondary">Discover More</a>
+        </div>
+    </div>
+  </section>
+<!-- end men section -->
+<div class="container">
+  <div class="brdr my-4"></div>
+</div>
+<!-- statrt women section -->
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>Women's Latest</h2>
+      <p>Details to details is what makes Hexashop different from the other themes.</p>
+  </div>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="row mt-4">
+            <div class="col-md-4" *ngFor="let Item of womenItems">
+              <div class="item">
+                <img [src]= 'Item.img' alt="men clothes" class="w-100">
+                  <div class="content mb-4">
+                      <h4>{{Item.name}}</h4>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <h6>{{Item.price}}</h6>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+      <div class="discover-more">
+        <a routerLink="/women-clothes" class="py-2 px-3 border border-secondary">Discover More</a>
+      </div>
+  </div>
+  </section>
+<!-- end women section -->
+<div class="container">
+  <div class="brdr my-4"></div>
+</div>
+<!-- statrt electric section -->
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>Electronic Latest</h2>
+      <p>Details to details is what makes Hexashop different from the other themes.</p>
+  </div>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="row mt-4">
+            <div class="col-md-4" *ngFor="let Item of electronicItems">
+              <div class="item">
+                <img [src]= 'Item.img' alt="men clothes" class="w-100">
+                  <div class="content mb-4">
+                      <h4>{{Item.name}}</h4>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <h6>{{Item.price}}</h6>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+      <div class="discover-more">
+        <a routerLink="/electronic" class="py-2 px-3 border border-secondary">Discover More</a>
+      </div>
+  </div>
+  </section>
+<!-- end electric section -->
+<div class="container">
+  <div class="brdr my-4"></div>
+</div>
+<!-- start our product section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="content">
+          <h2>Explore Our Products</h2>
+          <p>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish..</p>
+          <br>
+          <div class="quote d-flex justify-content-center">
+            <i class="fa-solid fa-quote-left me-3 fa-2x"></i>
+            <p class="fst-normal">You are not allowed to redistribute this template ZIP file on any other website.</p>
+          </div>
+          <br>
+          <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
+          <p>If this template is beneficial for your website or business, please kindly <a href="#">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p>
+        </div>
+        <div class="discover-more mt-5">
+          <a routerLink="/products" class="py-2 px-3 border border-secondary">Discover More</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="content bg-secondary-subtle text-center h-100 d-flex justify-content-center align-items-center flex-column">
+              <h4>Leather Bags</h4>
+              <p>Latest Collection</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="product-banner-content">
+              <img src="../../../assets/img/explore-image-01.jpg" alt="product" class="w-100">
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-4">
+            <div class="product-banner-content">
+              <img src="../../../assets/img/explore-image-02.jpg" alt="product" class="w-100">
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="content bg-secondary-subtle text-center h-100 d-flex justify-content-center align-items-center flex-column">
+              <h4>Different Types</h4>
+              <p>Over 304 Products</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end our product section -->
+
+<!--  start socialmedia -->
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>Social Media</h2>
+      <p>Details to details is what makes Hexashop different from the other themes.</p>
+  </div>
+  <div class="gallery text-center">
+    <lightgallery [settings]="settings">
+     <a href="assets/img/instagram-01.jpg">
+         <img alt="" src="assets/img/instagram-01.jpg" />
+     </a>
+     <a href="assets/img/instagram-02.jpg">
+         <img alt="" src="assets/img/instagram-02.jpg" />
+     </a>
+     <a href="assets/img/instagram-03.jpg">
+         <img alt="" src="assets/img/instagram-03.jpg" />
+     </a>
+     <a href="assets/img/instagram-04.jpg">
+         <img alt="" src="assets/img/instagram-04.jpg" />
+     </a>
+     <a href="assets/img/instagram-05.jpg">
+         <img alt="" src="assets/img/instagram-05.jpg" />
+     </a>
+     <a href="assets/img/instagram-06.jpg">
+         <img alt="" src="assets/img/instagram-06.jpg" />
+     </a>
+    </lightgallery>
+  </div>
+  </div>
+</section>
+<!-- end socialmedia -->
+<div class="container">
+  <div class="brdr my-4"></div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,85 @@
+@import "../../../useStyle";
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+.banner{
+    overflow: hidden;
+    &:hover{
+        .layer{
+            top: 0;
+        }
+    }
+}
+.banner-content{
+    p{
+        font-style: $fontStyle;
+        font-size: $fontSize;
+        margin-bottom: 2em;
+    }
+    a{
+        padding: 10px;
+        border: 1px solid #fff;
+        color: #fff;
+        transition: all 0.3s ease;
+        &:hover{
+            color: #000;
+            background-color: #fff;
+        }
+    }
+}
+.layer{
+    @extend .banner-content;
+    background-color: #000;
+    top: 100%;
+    transition: $transition;
+}
+ .title{
+    @extend .content
+}
+.item{
+    .content{
+        h4{
+            margin-top: 1.1em;
+        }
+        h6{
+            color: $textColor;
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+    }
+}
+.discover-more{
+    a{
+        color: $buttonBackground;
+        transition: $transition;
+        cursor: pointer;
+        &:hover{
+            color:#fff;
+            background-color: $buttonBackground;
+        }
+    }
+}
+
+.content{
+    @extend .content;
+    .quote{
+        p{
+            color: #000;
+        }
+    }
+}
+.gallery{
+    lightgallery{
+        img{
+            width: 180px;
+        }
+    }
+}
+
+/* ::ng-deep .owl-theme .owl-dots .owl-dot span {
+    background: #D6D6D6!important;} */ /* dots color*/
+
+
+/*  ::ng-deep .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #FCAC45!important;} */ /*active and on hover color*/

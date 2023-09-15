@@ -1,0 +1,65 @@
+<section>
+  <div class="container">
+    <div class="cartBox text-center bg-light shadow-lg rounded-4 py-5">
+
+      <!-- if cart list is full of products this section will show -->
+      <table class="table table-striped" *ngIf="cartItemList.length != 0">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of cartItemList; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{product.title}}</td>
+            <td><img style="width: 120px; cursor: pointer;" routerLink="/details/{{product.id}}" [src]="product.images[0]" alt="product image"></td>
+             <td>{{product.price}}</td>
+            <td>
+              <div class="quantity d-flex justify-content-center">
+                <button class="btn" (click)="moreItem(product,i)">+</button>
+
+                <p-inputNumber [(ngModel)]="product.quantity"  [min]="1" [max]="20"></p-inputNumber>
+               <button class="btn" (click)="lessItem(product,i)">-</button>
+              </div>
+            </td>
+            <td>{{product.price * product.quantity}} $</td>
+            <td><button class="btn btn-danger" (click)="removeSingleItem(i)"><i class="fa-solid fa-trash"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <!-- if cart list is empty this section will show -->
+      <div class="cartItems d-flex justify-content-center align-items-center" *ngIf="cartItemList.length == 0">
+        <div class="cartItemsContent">
+        <img src="../../../assets/img/shopping-cart-empty.png" alt="shoping img" class="mb-3">
+        <h4>Missing Cart items?</h4>
+        <h6>Go shopping and get some items to buy</h6>
+        <div class="back-to-shopping mt-4">
+          <a routerLink="/products" class="py-2 px-3 border border-secondary">Back To Shopping</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="options mt-3 d-flex justify-content-between">
+      <strong>Total Price is: <br> {{finalProductsPrice}} $</strong>
+      <div class="optBtn">
+        <ng-confirm></ng-confirm>
+        <p-toast position="top-right"></p-toast>
+        <button class="btn btn-danger me-2" (click)="removeAllItem()"><i class="fa-solid fa-trash me-2"></i>Delete All</button>
+        <button routerLink="/products" class="btn btn-primary me-2"><i class="fa-solid fa-cart-plus me-2"></i>Shop More</button>
+        <button class="btn btn-success"><i class="fa-solid fa-sack-dollar me-2"></i>Checkout</button>
+      </div>
+    </div>
+  </div>
+</section>
+<app-usfullinks></app-usfullinks>

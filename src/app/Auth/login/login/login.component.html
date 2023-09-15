@@ -1,0 +1,93 @@
+<section>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text">
+          <h2>Welcom To HEXASHOP Online Shopping</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            autem accusamus officia itaque exercitationem culpa, iste nemo
+            incidunt. Saepe dolore earum necessitatibus ducimus inventore
+            tenetur. Consectetur ab fugiat nesciunt nihil, impedit aut provident
+            perspiciatis hic dolorum fugit unde incidunt. Quo dolorum neque eos
+            optio sint facere ea deserunt quas repellat!
+          </p>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="divider"></div>
+      </div>
+      <div class="col-md-5">
+        <div class="alert alert-danger mb-3" *ngIf="error">
+          <h5>{{error}}</h5>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="submition()">
+          <div class="input mb-4">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control py-2" placeholder="Ex:test@test.com" formControlName="email"/>
+          </div>
+          <div class="input mb-4">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control py-2" formControlName="password" />
+          </div>
+          <div class="links d-flex justify-content-between">
+            <div class="forgetPassord">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#forgetPassword"
+                (click)="forgetPassword()">Forget Password</a>
+            </div>
+            <div class="register">
+              <a routerLink="/register">Make new Account</a>
+            </div>
+          </div>
+          <div class="login mt-4">
+            <button class="py-2 px-5 border border-secondary" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal for forget password -->
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="forgetPassword"
+    tabindex="-1"
+    aria-labelledby="forgetPasswordLabel"
+    *ngIf="password"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="forgetPasswordLabel">
+            Forget Password
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <input type="email" placeholder="Email" class="form-control" />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Send Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-usfullinks></app-usfullinks>

@@ -1,0 +1,82 @@
+.content h2, .content h4, .content h6 {
+  font-weight: 800;
+}
+.content p {
+  color: #a0a0a0;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.social-icon i {
+  background-color: #2a2a2a;
+  font-size: 1.4em;
+  width: 1.75em;
+  height: 1.75em;
+  text-align: center;
+  line-height: 1.75em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+}
+.social-icon i:hover {
+  color: #2a2a2a;
+  background-color: #eee;
+}
+
+.content p {
+  font-style: normal;
+}
+.content .inputs i {
+  font-size: 2em;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  color: #fff;
+  background-color: #2a2a2a;
+  transition: all 0.3s ease-in-out;
+}
+.content .inputs i:hover {
+  color: #2a2a2a;
+  background-color: #fff;
+}
+
+footer {
+  background-color: #2a2a2a;
+}
+footer .content h6 {
+  font-weight: 100;
+}
+footer .content ul li {
+  margin-bottom: 5px;
+}
+footer .content ul li a {
+  color: #fff;
+  font-size: 14px;
+}
+footer .content ul li a:hover {
+  color: #a0a0a0;
+}
+footer .line {
+  height: 1px;
+  background-color: #a0a0a0;
+}
+footer .under-footer p {
+  font-size: 14px;
+}
+footer .under-footer p a {
+  color: #fff;
+  font-size: 14px;
+}
+footer .under-footer p a:hover {
+  color: #a0a0a0;
+}/*# sourceMappingURL=footer.component.css.map */

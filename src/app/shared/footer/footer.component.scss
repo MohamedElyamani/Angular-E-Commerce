@@ -1,0 +1,44 @@
+@import "../../../useStyle";
+.content{
+    p{
+        font-style: normal;
+    }
+    
+}
+footer{
+    background-color: $buttonBackground;
+    .content{
+         h6{
+            font-weight: 100;
+        }
+        ul{
+            li{
+                margin-bottom: 5px;
+               a{
+                    color: #fff;
+                    font-size: $fontSize;
+                    &:hover{
+                        color: $textColor;
+                    }
+                } 
+
+            }
+        }
+    }
+    .line{
+        height: 1px;
+        background-color: $textColor;
+    }
+     .under-footer{
+        p{
+            font-size: $fontSize;
+            a{
+                color: #fff;
+                font-size: $fontSize;
+                &:hover{
+                    color: $textColor;
+                }
+            } 
+        }
+    } 
+} 

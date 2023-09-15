@@ -1,0 +1,22 @@
+@import '../../../../useStyle';
+@import '../../login/login/login.component.scss';
+
+.register{
+  button{
+      color: $buttonBackground;
+      background: transparent;
+      transition: $transition;
+      &:hover{
+          color:#fff;
+          background-color: $buttonBackground;
+      }
+  }
+}
+:host ::ng-deep .p-password {
+  width: 100%;
+  input{
+    width: inherit !important;
+    padding: 0.5rem !important;
+    font-size: 1rem !important;
+  }
+}

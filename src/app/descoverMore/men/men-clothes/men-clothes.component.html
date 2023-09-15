@@ -1,0 +1,29 @@
+<section>
+  <div class="container mt-5">
+      <div class="row">
+           <div class="col-md-4 mb-4" *ngFor="let product of menData | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+             <app-show-products [data]="product" (addToCart)="addProduct(product)"></app-show-products>
+          </div>
+      </div>
+       <div class="pagination p-2 justify-content-center align-items-center">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+  </div>
+</section>
+
+
+<!--                 <div class="box shadow rounded-2 py-2 px-3 py-4">
+                   <span class="bg-danger text-white float-end px-3 rounded-3">{{product.rating}} <i class="fa-solid fa-star"></i></span>
+                  <div class="imgBox overflow-hidden w-100">
+                    <img [src]="product.images[0]" alt="product" class="w-100 mt-2" routerLink="/details/{{product.id}}">
+                  </div>
+                  <div class="content mt-3">
+                      <p class="fw-bolder fst-normal text-black">{{product.title}}</p>
+                      <p class="fst-normal">{{product.description.slice(0, 40)}}....</p>
+                  </div>
+                   <div class="add-to-cart">
+                     <p-toast position="top-right"></p-toast>
+                    <a class="py-2 px-3 border border-secondary" (click)="addProduct(product)">Add To Cart</a>
+                    <span class="bg-warning float-end px-3 rounded-3">$ {{product.price}}</span>
+                  </div>
+              </div> -->

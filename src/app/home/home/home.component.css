@@ -1,0 +1,37 @@
+.banner {
+  overflow: hidden;
+}
+.banner:hover .layer {
+  top: 0;
+}
+
+.banner-content, .layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner-content p, .layer p {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 2em;
+}
+.banner-content a, .layer a {
+  padding: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.banner-content a:hover, .layer a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.layer {
+  background-color: #000;
+  top: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+  /*# sourceMappingURL=home.component.css.map */

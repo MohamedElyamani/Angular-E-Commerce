@@ -1,0 +1,35 @@
+@import '../../../useStyle';
+@import '../../home/home/home.component.scss';
+span{
+    font-size: $fontSize;
+}
+
+.box{
+    img{
+        height: 300px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+          transform: scale(1.1);
+        }
+    }
+}
+.nav-item{
+    a{
+        color: #fff;
+    }
+}
+.dropdown-menu{
+    background-color: #212529;
+    a{
+        &:hover{
+            color: #212529;
+        }
+    }
+}
+.add-to-cart{
+  @extend .discover-more
+}
+
+
+

@@ -1,0 +1,35 @@
+
+<app-sidebar></app-sidebar>
+<section>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6" >
+          <div class="gallery d-flex bg-light shadow rounded-4 p-3 mb-3">
+            <div class="imgsOfItem w-25 me-1">
+              <ul class="list-unstyled" *ngFor="let img of details.images">
+                <li><img src= {{img}} alt="item-image" class="w-75 h-25 mb-2 forGallery" appPreview></li>
+              </ul>
+            </div>
+            <div class="itemImg w-75">
+              <img src= {{details?.images[0]}} alt="item-image" class="w-100 h-100" id="mainImg">
+            </div>
+
+          </div>
+        </div>
+            <div class="col-md-6">
+                <div class="item-detail">
+                    <h2>{{details.title}}</h2>
+                    <p>{{details.description}}</p>
+                    <h4> <i class="fa-solid fa-star me-2"></i>{{details.rating}}</h4>
+                    <h4> <i class="fa-solid fa-hand-holding-dollar"></i> {{details.price}} $</h4>
+                    <div class="add-to-cart mt-4">
+                      <p-toast position="top-right"></p-toast>
+                      <a class="py-2 px-3 border border-secondary"(click)="addProduct(details)">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+<app-usfullinks></app-usfullinks>
+

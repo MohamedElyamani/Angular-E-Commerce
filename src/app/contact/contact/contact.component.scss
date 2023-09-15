@@ -1,0 +1,13 @@
+@import '../../../useStyle';
+.about{
+    @include baner(url(../../../assets/img/about-us-page-heading.jpg))
+}
+.about{
+    @include about-content
+}
+form{
+    @extend .inputs
+}
+textarea{
+    resize: none;
+}

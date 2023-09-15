@@ -1,0 +1,74 @@
+$textColor: #a0a0a0;
+$buttonBackground: #2a2a2a;
+$fontStyle: italic;
+$fontSize: 14px;
+$transition: all 0.3s ease-in-out;
+.content{
+    h2,h4,h6{
+        font-weight: 800;
+    }
+    p{
+        color: $textColor;
+        font-weight: 500;
+        font-size: $fontSize;
+        font-style: $fontStyle;
+    }
+}
+.banner-content{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.social-icon{
+    i{
+        background-color: $buttonBackground;
+        font-size: 1.4em;
+        width: 1.75em;
+        height: 1.75em;
+        text-align: center;
+        line-height: 1.75em;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        margin-right: 10px;
+        &:hover{
+            color: $buttonBackground;
+            background-color: #eee;
+        }
+    }
+}
+@mixin baner($bg){
+    height: 25em;
+    background-image: $bg;
+    background-position: center center;
+    background-size: cover;
+}
+
+@mixin about-content{
+        .content{
+            h3{
+                font-size: 3em;
+            }
+            p{
+                color: #fff;
+            }
+        }
+}
+.inputs{
+    i{
+        font-size: 2em;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        color: #fff;
+        background-color: $buttonBackground;
+        transition: $transition;
+        &:hover{
+            color: $buttonBackground;
+            background-color: #fff;
+        }
+    }
+}

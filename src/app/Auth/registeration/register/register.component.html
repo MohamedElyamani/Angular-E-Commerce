@@ -1,0 +1,125 @@
+<section>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text">
+          <h2>Welcom To HEXASHOP Online Shopping</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            autem accusamus officia itaque exercitationem culpa, iste nemo
+            incidunt. Saepe dolore earum necessitatibus ducimus inventore
+            tenetur. Consectetur ab fugiat nesciunt nihil, impedit aut provident
+            perspiciatis hic dolorum fugit unde incidunt. Quo dolorum neque eos
+            optio sint facere ea deserunt quas repellat!
+          </p>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="divider"></div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="alert alert-danger" *ngIf="error">
+          <h5>{{ error }}</h5>
+        </div>
+        <form [formGroup]="registrationForm" (ngSubmit)="submition()">
+          <div class="input mb-4">
+            <label for="fName">First Name:</label>
+            <input
+              type="text"
+              name="fName"
+              class="form-control py-2"
+              formControlName="firstName"
+              [ngClass]="{
+                'is-invalid':
+                  registrationForm.get('firstName').valid == false &&
+                  registrationForm.get('firstName').touched,
+                'is-valid': registrationForm.get('firstName').valid == true}"/>
+            <p class="invalid-feedback">Minimum are 3 letters and Maximum is 15.</p>
+          </div>
+          <div class="input mb-4">
+            <label for="lName">Last Name:</label>
+            <input
+              type="text"
+              name="lName"
+              class="form-control py-2"
+              formControlName="lastName"
+              [ngClass]="{
+                'is-invalid':
+                  registrationForm.get('lastName').valid == false &&
+                  registrationForm.get('lastName').touched,
+                'is-valid': registrationForm.get('lastName').valid == true}"/>
+            <p class="invalid-feedback"> Minimum are 3 letters and Maximum is 15.</p>
+          </div>
+          <div class="input mb-4">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control py-2"
+              placeholder="Ex:test@test.com"
+              formControlName="email"
+              [ngClass]="{
+                'is-invalid':
+                  registrationForm.get('email').valid == false &&
+                  registrationForm.get('email').touched,
+                'is-valid': registrationForm.get('email').valid == true}"/>
+            <p class="invalid-feedback">Please Enter a Valid Email.</p>
+          </div>
+          <div class="input mb-4">
+            <label for="password">Password:</label>
+            <div>
+              <p-password
+                (keyup)="checkMatch()"
+                [toggleMask]="true"
+                formControlName="password"
+                [ngClass]="{
+                  'is-invalid':
+                    registrationForm.get('password').valid == false &&
+                    registrationForm.get('password').touched,
+                  'is-valid': registrationForm.get('password').valid == true}" >
+                <ng-template pTemplate="header">
+                  <h6>Pick a password</h6>
+                </ng-template>
+                <ng-template pTemplate="footer">
+                  <p-divider></p-divider>
+                  <p class="mt-2">Suggestions</p>
+                  <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                    <li>At least one lowercase</li>
+                    <li>At least one uppercase</li>
+                    <li>At least one digit</li>
+                    <li>Minimum 8 characters</li>
+                  </ul>
+                </ng-template>
+              </p-password>
+            </div>
+          </div>
+          <div class="input mb-4">
+            <label for="cPassword">Confirm Password:</label>
+            <input
+              (keyup)="checkMatch()"
+              type="password"
+              name="cPassword"
+              class="form-control py-2"
+              formControlName="cPassword"
+              [ngClass]="{
+                'is-invalid':
+                  registrationForm.get('cPassword').touched && !matchingPassword,
+                'is-valid': registrationForm.get('cPassword').valid === true}"/>
+            <p class="invalid-feedback">Password dosn't match.</p>
+          </div>
+          <div class="backToLogin">
+            <a routerLink="/login">already have an account</a>
+          </div>
+          <div class="register mt-4">
+            <p-toast position="top-right"></p-toast>
+            <button class="py-2 px-5 border border-secondary" type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-usfullinks></app-usfullinks>
+

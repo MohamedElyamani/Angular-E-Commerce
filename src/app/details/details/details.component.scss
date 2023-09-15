@@ -1,0 +1,33 @@
+@import '../../../useStyle';
+@import '../../home/home/home.component.scss';
+.item-detail{
+  >h4{
+      .fa-star{
+          color: rgb(236, 201, 0);
+      }
+  }
+  h4{
+      .fa-hand-holding-dollar{
+          color: green;
+          font-size: 2rem;
+      }
+  }
+}
+.add-to-cart{
+  @extend .discover-more
+}
+.imgsOfItem{
+  img{
+    opacity: 0.6;
+    cursor: pointer;
+  }
+  .active{
+    border: 4px solid green;
+    opacity: 1;
+  }
+}
+.alert{
+  position: absolute;
+  top: 0;
+  right: 0;
+}

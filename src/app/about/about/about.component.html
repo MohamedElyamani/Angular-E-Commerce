@@ -1,0 +1,111 @@
+<section>
+  <div class="about py-5 title d-flex justify-content-center align-items-center">
+    <div class="content text-center text-white">
+      <h3>About Our Company</h3>
+      <p class="fst-normal">Awesome, clean & creative HTML5 Template</p>
+    </div>
+  </div>
+  <section>
+    <div class="container my-5">
+      <div class="row gx-5">
+        <div class="col-md-6">
+          <div class="about-img">
+            <img
+              src="assets/img/about-left-image.jpg"
+              alt="about-us"
+              class="w-100"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="content">
+            <h2>About Us & Our Skills</h2>
+            <p class="my-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.
+            </p>
+            <div class="quote d-flex justify-content-center my-3">
+              <i class="fa-solid fa-quote-left me-3 fa-2x"></i>
+              <p class="fst-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.
+              </p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <div class="brdr my-4"></div>
+
+            <!-- social media icon -->
+            <div class="social-icon text-white">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-brands fa-behance"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="brdr"></div>
+  </div>
+
+  <!-- srart team -->
+  <section>
+    <div class="content text-center">
+      <h2>Our Amazing Team</h2>
+      <p>
+        Details to details is what makes Hexashop different from the other
+        themes.
+      </p>
+    </div>
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-md-4" *ngFor="let team of team">
+          <div class="team position-relative">
+            <img class="w-100" [src]="team.img" alt="team member" />
+            <div class="layer position-absolute top-0 end-0 w-100 h-100">
+              <div class="social-icon text-center d-flex align-items-center justify-content-center h-100">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-behance"></i>
+              </div>
+            </div>
+          </div>
+          <div class="content mt-3 text-center">
+            <h4>{{ team.name }}</h4>
+            <p>{{ team.jobTitle }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="brdr"></div>
+  </div>
+  <!-- start service -->
+  <section>
+    <div class="content text-center">
+      <h2>Our Services</h2>
+      <p> Details to details is what makes Hexashop different from the other themes.</p>
+    </div>
+    <div class="container">
+      <div class="row py-3 mt-3">
+        <div class="col-md-4" *ngFor="let serv of services">
+          <div class="content shadow py-5 px-3 text-center">
+            <h4>{{ serv.name }}</h4>
+            <p class="fst-normal text-dark">{{ serv.desc }}</p>
+            <img class="img-fluid" [src]="serv.img" alt="service" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="brdr"></div>
+  </div>
+</section>
+<app-footer></app-footer>

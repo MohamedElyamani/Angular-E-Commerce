@@ -1,0 +1,39 @@
+@import '../../useStyle';
+nav{
+    border-bottom: 4px dotted #ccc;
+}
+ul{
+    li{
+        a{
+            font-weight: 500;
+            color: #000;
+            margin-right: 1.1em;
+            &:hover{
+                color: $textColor;
+            }
+        }
+    }
+}
+ul{
+  li{
+    cursor: pointer;
+    a.active{
+        color: $textColor;
+      }
+  }
+}
+.cart{
+  width: fit-content;
+  i{
+    font-size: 1.6em;
+  }
+  span{
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 0.825em;
+  }
+}
